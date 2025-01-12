@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./post-popup.scss";
 
 const PostPopup = ({ post, open, popupClose }) => {
+  
+  useEffect(() => {
+    if (open) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "";
+    };
+  }, [open]);
+
   return (
     <div
       className={`popup__wrapper ${open ? "popup__wrapper--open" : ""}`}
