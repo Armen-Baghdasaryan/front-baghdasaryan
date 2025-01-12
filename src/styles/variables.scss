@@ -1,0 +1,59 @@
+/* fonts */
+$f1: 'Roboto', sans-serif;
+
+/* colors */
+$black: #000;
+$white: #ffffff;
+$gray: #929292;
+$light_gray: #E9E9E9;
+$red: #EB0028;
+
+/* breakpoints */
+$breakpoints: (
+  'xs': 450,
+  'sm': 576,
+  'md': 768,
+  'lg': 992,
+  'xl': 1200,
+  'xxl': 1400,
+);
+
+/* other */
+$mobile_header_height: 82px;
+$header_height: 140px;
+
+/* mixins */
+@mixin media-xs {
+  @media screen and (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media all and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-xxl {
+  @media all and (min-width: 1400px) {
+    @content;
+  }
+}

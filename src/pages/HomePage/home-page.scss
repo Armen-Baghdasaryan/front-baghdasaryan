@@ -1,0 +1,27 @@
+@use "/src/styles/variables.scss";
+
+.home__page {
+  .home__container {
+    padding-top: 0.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .post__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  @include variables.media-md {
+    .home__container {
+      padding-top: 3rem;
+      padding-bottom: 10.375rem;
+    }
+
+    .post__items {
+      column-gap: 40px;
+      row-gap: 48px;
+    }
+  }
+}
