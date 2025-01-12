@@ -1,2 +1,2 @@
-# npm intall
+# npm install
 # npm run dev
